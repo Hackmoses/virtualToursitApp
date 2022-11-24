@@ -91,7 +91,7 @@
                                                     <rect key="frame" x="-56" y="0.0" width="240" height="128"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="B51-CC-wxz">
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="B51-CC-wxz">
                                                     <rect key="frame" x="54" y="54" width="20" height="20"/>
                                                 </activityIndicatorView>
                                             </subviews>
@@ -113,6 +113,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="New Collection">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="collectionButtonTapped:" destination="d1T-sc-jyS" eventType="touchUpInside" id="daH-Gr-Mk9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FQa-1i-Wmf"/>

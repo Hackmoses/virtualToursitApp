@@ -81,6 +81,7 @@ class PhotoAlbumViewController: UIViewController, MKMapViewDelegate, UICollectio
                     self.collectionView.reloadData()
                     print("album saved")
                     self.collectionView.reloadData()
+                    debugPrint()
                     
                 } else {
                     print("No photo downloaded")
@@ -158,6 +159,7 @@ class PhotoAlbumViewController: UIViewController, MKMapViewDelegate, UICollectio
         if let url = photo.imageURL {
             if let image = photo.image{
                 cell.imageViewCell.image = UIImage(data: image)
+                cell.activityIndicator.startAnimating()
             } else {
                 FlickrDataClient.downloadPhotos(imageURL: URL(string: url)!) { data, error in
                     cell.activityIndicator.startAnimating()
